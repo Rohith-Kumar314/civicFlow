@@ -4,7 +4,7 @@
 
 ## Live Demo
 
-🚀 **Live Link**: [https://civicflow.vercel.app](https://civicflow.vercel.app) <!-- ← Replace with your actual deployed link -->
+🚀 **Live Link**: [https://civic-flow-8uy8.vercel.app/](https://civic-flow-8uy8.vercel.app/) 
 
 (Backend API is hosted separately — frontend connects via environment variable)
 
@@ -60,41 +60,65 @@
 ```bash 
 git clone https://github.com/yourusername/civicflow.git
 cd civicflow
+```
 2. Backend Setup
-bash  cd backend
+
+```bash
+cd backend
 npm install
+```
+
 Create .env in backend/:
+
+```bash
 envPORT=8080
 MONGO_URL=mongodb+srv://<user>:<password>@cluster0.xxx.mongodb.net/civicFlow?retryWrites=true&w=majority
 JWT_SECRET=your_very_long_random_secret_string_2025
 CLOUDINARY_CLOUD_NAME=xxx
 CLOUDINARY_API_KEY=xxx
 CLOUDINARY_API_SECRET=xxx
+```
+
 Seed initial data (admin, workers, residents, sample complaints):
-bash  node seedData.js
+```bash  node seedData.js ```
 Start backend:
-bash  npm run dev
+
+```bash
+npm run dev
 # or
 node server.js
+```
+
 API runs at: http://localhost:8080
 3. Frontend Setup
-bash cd ../frontend
+```bash 
+cd ../frontend
 npm install
+```
+
 Create .env in frontend/ (Vite uses VITE_ prefix):
 envVITE_API_URL=http://localhost:8080/api
 Start frontend:
-bash  npm run dev
+```bash
+npm run dev
+```
 App opens at: http://localhost:5173 (or similar)
+
 Default Login Credentials (after seeding)
+```bash
 Admin
 Email: admin@civicflow.in
 Password: admin@2025
+
 Worker (example)
 Email: rahul_sharma@civicflow.in
 Password: worker@123
+
 Resident (example)
 Email: rahul.sharma1@gmail.com
 Password: resident@123
+```
+
 All seeded users use simple passwords for development. Change them in production!
 Project Structure
 textcivicFlow/
@@ -113,8 +137,6 @@ textcivicFlow/
 └── .gitignore
 Important Notes
 
-Never commit .env files (ignored via .gitignore)
-Run seedData.js only when resetting DB
 Images are stored on Cloudinary — ensure keys are correct
 For production: add HTTPS, rate limiting, input sanitization, strong JWT secret
 

@@ -7,6 +7,7 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+
   const navigate = useNavigate();
 
   // Load user on refresh
@@ -14,9 +15,12 @@ export const AuthProvider = ({ children }) => {
     const token = localStorage.getItem("token");
 
     if (token) {
+    
+      
       API.get("/auth/me")
         .then((res) => {
           setUser(res.data.user);
+  
         })
         .catch(() => {
           localStorage.removeItem("token");
