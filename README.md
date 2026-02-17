@@ -111,7 +111,7 @@ Email: admin@civicflow.in
 Password: admin@2025
 
 Worker (example)
-Email: rahul_sharma@civicflow.in
+Email: rahul.sharma@civicflow.in
 Password: worker@123
 
 Resident (example)
@@ -119,23 +119,7 @@ Email: rahul.sharma1@gmail.com
 Password: resident@123
 ```
 
-All seeded users use simple passwords for development. Change them in production!
-Project Structure
-textcivicFlow/
-├── frontend/               # React + Vite app
-│   ├── src/
-│   │   ├── app_pages/     # role-based dashboards
-│   │   ├── context/
-│   │   └── ...
-├── backend/                # Express API + MongoDB
-│   ├── models/
-│   ├── controllers/
-│   ├── routes/
-│   ├── middlewares/
-│   └── seedData.js        # realistic seeding script
-├── README.md
-└── .gitignore
-Important Notes
+All seeded users use simple passwords for development.
 
 Images are stored on Cloudinary — ensure keys are correct
 For production: add HTTPS, rate limiting, input sanitization, strong JWT secret
