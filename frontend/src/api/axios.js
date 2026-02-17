@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:8080/api", // change in production
+  baseURL: "https://civicflow-4t7l.onrender.com/", // change in production
   // withCredentials: true, // if using cookies
 });
 
